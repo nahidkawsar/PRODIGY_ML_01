@@ -1,0 +1,143 @@
+<html>
+<head>
+
+<title>House price prediction</title>
+<style>
+
+
+
+
+body {
+    background-image: url("{{ url_for('static', filename='house.jpg') }}");
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+form {
+
+text-align:center
+}
+
+input{
+width: 50%
+}
+
+input[type=submit] {
+  background-color: green;
+  color: white;
+  width: 10%
+}
+
+select {
+width: 50%;
+}
+label {
+  font-size: 20px;
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+}​
+
+
+</style>
+</head>
+
+<body>
+
+<center><h1>House price prediction: {{ results}}</h1></center>
+
+<form action="{{ url_for('predict')}}" method="post">
+
+
+<label for = "fnam">Name</label>
+<input type = 'text' id = 'fnam', name = 'fn', placeholder = "Enter Passenger's Name..." />
+
+<br></br>
+
+<label for = "LotFrontage">LotFrontage</label>
+<input type = 'text' id = 'LotFrontage', name = 'LotFrontage', placeholder = 'Enter LotFrontage...' />
+
+<br></br>
+
+
+
+
+
+<label for = "LotArea">LotArea</label>
+<input type = 'text' id = 'LotArea', name = 'LotArea', placeholder = 'Enter LotArea...' />
+
+<br></br>
+
+
+
+
+
+
+<label for = "GrLivArea">GrLivArea</label>
+<input type = 'text' id = 'GrLivArea', name = 'GrLivArea', placeholder = 'Enter GrLivArea...' />
+
+<br></br>
+
+
+<label for = "BsmtFullBath">BsmtFullBath</label>
+<input type = 'text' id = 'BsmtFullBath', name = 'BsmtFullBath', placeholder = 'Enter BsmtFullBath...' />
+
+<br></br>
+
+<label for = "BsmtHalfBath">BsmtHalfBath</label>
+<input type = 'text' id = 'BsmtHalfBath', name = 'BsmtHalfBath', placeholder = 'Enter BsmtHalfBath...' />
+
+<br></br>
+
+
+
+<label for = "FullBath">FullBath</label>
+<input type = 'text' id = 'FullBath', name = 'FullBath', placeholder = 'Enter FullBath...' />
+
+<br></br>
+
+
+
+<label for = "HalfBath">HalfBath</label>
+<input type = 'text' id = 'HalfBath', name = 'HalfBath', placeholder = 'Enter HalfBath...' />
+
+<br></br>
+
+<label for = "BedroomAbvGr">BedroomAbvGr</label>
+<input type = 'text' id = 'BedroomAbvGr', name = 'BedroomAbvGr', placeholder = 'Enter BedroomAbvGr...' />
+
+<br></br>
+
+
+
+<label for = "KitchenAbvGr">KitchenAbvGr</label>
+<input type = 'text' id = 'KitchenAbvGr', name = 'KitchenAbvGr', placeholder = 'Enter KitchenAbvGr...' />
+
+<br></br>
+
+
+
+
+
+
+
+
+
+
+
+<label></label>
+<input id="submit" type="submit" value="Predict" ></input>
+
+</form>
+
+</body>
+
+
+
+
+
+
+</html>
